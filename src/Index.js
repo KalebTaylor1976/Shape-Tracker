@@ -1,4 +1,7 @@
-function handleTriangleForm() {
+import Triangle from './triangle.js';
+import './css/styles.css';
+
+function handleTriangleForm(event) {
   event.preventDefault();
   document.querySelector('#response').innerText = null;
   const length2 = parseInt(document.querySelector('#length2').value);
@@ -11,6 +14,7 @@ function handleTriangleForm() {
   document.querySelector('#response').append(pTag);
 }
 
-window.addEventListener("load", function() {
-  document.querySelector("#triangle-checker-form").addEventListener("submit", handleTriangleForm);
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector("#triangle-checker-form")
+  .addEventListener("submit", handleTriangleForm);
 });
